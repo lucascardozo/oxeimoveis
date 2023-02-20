@@ -1,3 +1,19 @@
 <script>
-  console.log('olá');
+  
+ /* Script for redirect url */
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get("email");
+  
+  console.log(email);
+  
+  if(email != null){
+    url = 'redefinir-senha?email='+email;
+  }else{
+    url = "";
+  }
+  
+  var domain = 'https://oxeimoveis.com.br/';
+  window.location.replace(domain+url);
+  
 </script>
